@@ -1,0 +1,10 @@
+#!/bin/bash
+
+aspell -c KaeferThesis/Chapters/abstract.tex
+
+aspell -c KaeferThesis/Chapters/chapter_1.tex
+aspell -c KaeferThesis/Chapters/chapter_2.tex
+aspell -c KaeferThesis/Chapters/chapter_3.tex
+aspell -c KaeferThesis/Chapters/chapter_4.tex
+aspell -c KaeferThesis/Chapters/chapter_5.tex
+
