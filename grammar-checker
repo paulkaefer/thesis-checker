@@ -94,12 +94,6 @@ grep --color=auto -r "take a look at" $1
 
 pause "Press [ENTER] to continue. "
 
-# don't split verbs
-# ``Whenever you use a pronoun, ask if the antecedent can be mis-interpreted." - Dr. Corliss
-
-# what else do I typically do that is often corrected?
-# at most one URL per reference in the Bibliography
-
 echo " "
 echo "Checking for 'data is' instead of 'data are'... (be careful about this one)"
 echo " "
