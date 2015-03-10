@@ -1,0 +1,111 @@
+#!/bin/bash
+
+function pause() {
+   read -p "$*"
+}
+
+# list of common contractions: http://grammar.about.com/od/words/a/EnglishContractions.htm
+echo " "
+echo "Checking for common contractions..."
+echo " "
+
+grep --color=auto -r "can't" $1
+grep --color=auto -r "won't" $1 
+grep --color=auto -r "don't" $1
+grep --color=auto -r "isn't" $1
+grep --color=auto -r "doesn't" $1
+grep --color=auto -r "should't" $1
+
+pause "Press [ENTER] to continue. "
+
+echo " "
+echo "Checking for use of 'you' instead of 'one'..."
+echo " "
+
+grep --color=auto -r "you" $1
+# replace I with the "royal we"
+# commented out because this one can go either way (and my acknowledgements page says 'I' a lot)
+#grep --color=auto -r "I " $1
+
+# in honor of https://en.wikipedia.org/wiki/User:Giraffedata/comprised_of
+echo " "
+echo "Checking for 'comprised/comprising of'..."
+echo " "
+
+grep --color=auto -r "comprised of" $1
+grep --color=auto -r "comprising of" $1
+
+pause "Press [ENTER] to continue. "
+
+echo " "
+echo "Checking for 'as well as'..."
+echo " "
+
+grep --color=auto -r "as well as" $1
+
+echo " "
+echo "Checking for 'in order to', which may typically be replaced with 'to'..."
+echo " "
+
+grep --color=auto -r "in order to" $1
+
+pause "Press [ENTER] to continue. "
+
+# potentially, run the following
+# to find instances of "like" to replace with "such as"
+#grep -r "like" $1
+
+echo " "
+echo "Checking for 'pick up' instead of 'capture'..."
+echo " "
+grep --color=auto -r "pick up" $1
+
+# also consider
+#grep --color=auto -r "thing" $1
+echo " "
+echo "Checking for 'things' instead of 'factors' or other more appropriate term..."
+echo " "
+grep --color=auto -r "things" $1
+
+# because we still have work to do;
+# our ``solution" is imperfect
+echo " "
+echo "Checking for 'solve' instead of 'address'..."
+echo " "
+grep --color=auto -r "solve" $1
+
+#pause "Press [ENTER] to continue. "
+
+echo " "
+echo "Checking for 'utilize' instead of 'use'..."
+echo " "
+grep --color=auto -r "utilize" $1
+
+# for example, 'is calculated as follows' should be replaced with 'is calculated as'
+echo " "
+echo "Checking for 'as follows' instead of 'as'..."
+echo " "
+grep --color=auto -r "as follows" $1
+
+echo " "
+echo "Checking for 'take a look at' instead of 'consider'..."
+echo " "
+grep --color=auto -r "take a look at" $1
+
+pause "Press [ENTER] to continue. "
+
+# don't split verbs
+# ``Whenever you use a pronoun, ask if the antecedent can be mis-interpreted." - Dr. Corliss
+
+# what else do I typically do that is often corrected?
+# at most one URL per reference in the Bibliography
+
+echo " "
+echo "Checking for 'data is' instead of 'data are'... (be careful about this one)"
+echo " "
+grep --color=auto -r "data is" $1
+
+# don't need to pause at the end of the script
+#pause "Press [ENTER] to continue. "
+
+
