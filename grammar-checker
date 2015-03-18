@@ -92,6 +92,11 @@ echo "Checking for 'take a look at' instead of 'consider'..."
 echo " "
 grep --color=auto -r "take a look at" $1
 
+echo " "
+echo "Checking for 'figure out' instead of 'determine'..."
+echo " "
+grep --color=auto -r "figure out" $1
+
 pause "Press [ENTER] to continue. "
 
 echo " "
