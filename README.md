@@ -1,6 +1,8 @@
 # thesis-checker
 grep thesis file(s) with the aim of improving grammar
 
+Your thesis must be in a text format, such as [LaTeX](https://en.wikipedia.org/wiki/LaTeX).
+
 ## instructions
 To check grammar, run ```./grammar-checker "path/to/files/to/check/*"``` or escape the asterisk with a backslash (\\)
 
